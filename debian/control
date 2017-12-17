@@ -1,0 +1,33 @@
+Source: switchboard-plug-display
+Section: x11
+Priority: optional
+Maintainer: Sergey "Shnatsel" Davidoff <shnatsel@gmail.com>
+Build-Depends: cmake,
+               debhelper (>= 9),
+               libclutter-1.0-dev,
+               libclutter-gtk-1.0-dev,
+               libgnome-desktop-3-dev,
+               libgranite-dev,
+               libgtk-3-dev,
+               libswitchboard-2.0-dev,
+               valac
+Standards-Version: 3.9.2
+Homepage: https://launchpad.net/pantheon-plugs
+
+Package: switchboard-plug-display
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Enhances: switchboard
+Description: Switchboard plug for display settings
+ This plug can be used to change display settings like orientation and resolution.
+
+Package: switchboard-plug-display-dbg
+Architecture: any
+Section: debug
+Priority: extra
+Depends: switchboard-plug-display (= ${binary:Version}), ${misc:Depends}
+Enhances: switchboard-plug-display
+Description: Switchboard plug for display settings (debugging symbols)
+ This plug can be used to change display settings like orientation and resolution.
+ .
+ This package contains debugging symbols for switchboard-plug-display.
